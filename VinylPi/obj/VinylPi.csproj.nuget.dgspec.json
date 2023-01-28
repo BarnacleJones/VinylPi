@@ -1,28 +1,44 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\VinylPi.csproj": {}
+    "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\VinylPi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\VinylPi.csproj": {
+    "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\VinylPi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\VinylPi.csproj",
+        "projectUniqueName": "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\VinylPi.csproj",
         "projectName": "VinylPi",
-        "projectPath": "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\VinylPi.csproj",
-        "packagesPath": "C:\\Users\\Ben\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\obj\\",
+        "projectPath": "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\VinylPi.csproj",
+        "packagesPath": "C:\\Users\\jonesb\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Ben\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\jonesb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "P:\\DevStore\\Nuget\\Radfords": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nxiTVPNifvEyB3lLidHjhUlQxliuh9s21Mfv4zzqAXfeLecjsi/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -68,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
