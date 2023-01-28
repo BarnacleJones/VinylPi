@@ -12,7 +12,6 @@ builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton<IApiService, ApiService>();
 
-builder.Services.AddSingleton<ICollectionItemsService, CollectionItemsService>();
 
 
 

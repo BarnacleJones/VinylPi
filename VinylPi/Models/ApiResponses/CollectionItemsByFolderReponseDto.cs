@@ -5,8 +5,8 @@
         //response from GET /users/{username}/collection/folders/{folder_id}/releases
         public class CollectionDTO
         {
-            public PaginationDTO Pagination { get; set; }
-            public List<ReleaseDTO> Releases { get; set; }
+            public PaginationDTO? Pagination { get; set; }
+            public List<ReleaseDTO>? Releases { get; set; }
         }
 
         public class ReleaseDTO

@@ -10,23 +10,19 @@ namespace VinylPi.Controllers
 {
     public class CollectionController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly ICollectionItemsService _collectionItemService;
+        private readonly IApiService _apiService;
 
-        public CollectionController(ILogger<HomeController> logger, ICollectionItemsService collectionItemsService)
+        public CollectionController(IApiService apiService)
         {
-            _logger = logger;
-            _collectionItemService = collectionItemsService;
+            _apiService= apiService;
         }
 
         public IActionResult Index()
         {
-            var json = _collectionItemService.GetCollectionItemsByFolderAsync("GratefulBed", 1);
+            var request = _apiService.GetApiDataFromDiscogs($"https://api.discogs.com/users/gratefulbed/collection/releases/0");
+            var data = request.Result;
 
-            var a = json.Result;
-            //var collectionItems = JsonConvert.DeserializeObject<CollectionItemsByFolderReponseDto>(json.Result);
-
-            return View(json.Result);
+            return View(data);
         }
 
 

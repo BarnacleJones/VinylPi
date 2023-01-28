@@ -1,9 +1,10 @@
-﻿using VinylPi.Models.ApiResponses;
+﻿using Microsoft.AspNetCore.Mvc;
+using VinylPi.Models.ApiResponses;
 
 namespace VinylPi.Services
 {
     public interface IApiService
     {
-        Task<string> GetApiDataFromDiscogs(string url);
+        Task<IActionResult> GetApiDataFromDiscogs(string url);
     }
 }

@@ -1,13 +1,15 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
 using VinylPi.Models.ApiResponses;
 using static VinylPi.Models.ApiResponses.CollectionItemsByFolderReponseDto;
 
 namespace VinylPi.Services
 {
-    public class ApiService : IApiService
+    public class ApiService : Controller, IApiService
     {
         private readonly HttpClient _httpClient;
         private string _discogs_authorize_url;
@@ -18,9 +20,9 @@ namespace VinylPi.Services
         private string _discogs_token_url;
 
 
-        public ApiService(IHttpClientFactory httpClientFactory)
+        public ApiService(HttpClient httpClient)
         {
-            _httpClient = httpClientFactory.CreateClient();
+            _httpClient = httpClient;
             _discogs_key = Environment.GetEnvironmentVariable("DISCOGS_KEY");
             _discogs_consumer_key = Environment.GetEnvironmentVariable(variable: "DISCOGS_CONSUMER_KEY");
             _discogs_authorize_url = Environment.GetEnvironmentVariable(variable: "DISCOGS_AUTHORIZE_URL");
@@ -29,20 +31,30 @@ namespace VinylPi.Services
             _discogs_token_url = Environment.GetEnvironmentVariable(variable: "DISCOGS_TOKEN_URL");
         }
 
-        public async Task<string> GetApiDataFromDiscogs(string url)
+        public async Task<IActionResult> GetApiDataFromDiscogs(string url)
         {
-            //_httpClient.DefaultRequestHeaders.Add("Authorization", $"Discogs key={_discogs_key}, secret={_discogs_consumer_secret}");            
-            //_httpClient.DefaultRequestHeaders.Add("Content-Type", "application/x-www-form-urlencoded");
-            //_httpClient.DefaultRequestHeaders.Add("User-Agent", "some_user_agent");
-            //_httpClient.DefaultRequestHeaders.Add("Authorization",
-            //    $"OAuth oauth_consumer_key={_discogs_consumer_key}, oauth_nonce={Guid.NewGuid().ToString()}, oauth_signature={_discogs_consumer_secret}&, oauth_signature_method=PLAINTEXT, oauth_timestamp={((int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds)}, oauth_callback={"none"}");
-            //url += $"/releases&key={_discogs_consumer_key}&secret={_discogs_consumer_secret}";
+            // Send the GET request
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "VinylPi");
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
+            
+            // Check if the response was successful
+            if (response.IsSuccessStatusCode)
+            {
+                // Get the JSON data
+                var json = await response.Content.ReadAsStringAsync();
 
-            url += $"&token={_discogs_key}";
-            var response = await _httpClient.GetAsync(url);
-            response.EnsureSuccessStatusCode();
+                // Deserialize the JSON data
+                var data = JsonConvert.DeserializeObject(json);
 
-            return await response.Content.ReadAsStringAsync();
+                // Return the data
+                return Ok(data);
+            }
+            else
+            {
+                // Throw an exception if the response was not successful
+                return StatusCode(500, "Failed to get data from API: " + response.ReasonPhrase);
+            }
+
         }
     }
 }
