@@ -4,12 +4,12 @@
 
 Created to practice concepts and technologies such as:
 
-  +Interfaces
+  + Interfaces
   
-  +Dependency Injection
+  + Dependency Injection
   
-  +MVC
+  + MVC
   
   + Services
   
-  +Entity Framework
+  + Entity Framework
