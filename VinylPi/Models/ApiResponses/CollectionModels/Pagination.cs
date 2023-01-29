@@ -1,0 +1,13 @@
+﻿
+
+namespace VinylPi.Models.ApiResponses.CollectionModels
+{
+    public class Pagination
+    {
+        public int? Page { get; set; }
+        public int? Pages { get; set; }
+        public int? Per_page { get; set; }
+        public int? Items { get; set; }
+        public Urls? Urls { get; set; }
+    }
+}

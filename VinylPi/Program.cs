@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using VinylPi.Models.ApiResponses;
 using VinylPi.Services;
 
@@ -11,10 +12,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton<IApiService, ApiService>();
-
-
-
-
 
 
 var app = builder.Build();
@@ -29,7 +26,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();

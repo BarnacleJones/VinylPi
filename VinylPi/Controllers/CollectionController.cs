@@ -1,9 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System;
-using System.Diagnostics;
-using VinylPi.Models;
-using VinylPi.Models.ApiResponses;
 using VinylPi.Services;
 
 namespace VinylPi.Controllers
@@ -20,7 +15,7 @@ namespace VinylPi.Controllers
         public IActionResult Index()
         {
             var request = _apiService.GetApiDataFromDiscogs($"https://api.discogs.com/users/gratefulbed/collection/releases/0");
-            var data = request.Result;
+            var data = request.Result;  
 
             return View(data);
         }

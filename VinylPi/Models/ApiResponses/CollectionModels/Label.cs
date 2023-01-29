@@ -1,0 +1,12 @@
+﻿namespace VinylPi.Models.ApiResponses.CollectionModels
+{
+    public class Label
+    {
+        public string? Name { get; set; }
+        public string? Catno { get; set; }
+        public string? Entity_type { get; set; }
+        public string? Entity_type_name { get; set; }
+        public int? Id { get; set; }
+        public string? Resource_url { get; set; }
+    }
+}

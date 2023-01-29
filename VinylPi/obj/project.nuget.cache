@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "M8GCPwAx4fxkduFtk+v8/axGrmn7GCpns2Ni5+TaFBfjTuWOrbFAOF7yDN28sIhlMY53seg1TwKsT5UviwaXyA==",
+  "dgSpecHash": "g6oebxVOEC/2YmGQz3nWTuf+RZXqukQ4N6XwCPoaTtudjraGkKBsElOkDep1LwLZ1YcvTgidl5t15Ff18LcAqA==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\TestApps\\VinylPi\\VinylPi\\VinylPi.csproj",
+  "projectFilePath": "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi\\VinylPi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jonesb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\jonesb\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\jonesb\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\Ben\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ben\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ben\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }
