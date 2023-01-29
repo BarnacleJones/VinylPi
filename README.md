@@ -1,15 +1,7 @@
 # VinylPi
 
-.Net core MVC application for hosting a local database and website on my Raspberry Pi.
+In development.
 
-Created to practice concepts and technologies such as:
+.NET core MVC application using Discogs API to create a customised Discogs interface.
 
-  + Interfaces
-  
-  + Dependency Injection
-  
-  + MVC
-  
-  + Services
-  
-  + Entity Framework
+ 
