@@ -1,6 +1,8 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration.EnvironmentVariables;
+using VinylPi.DataAccess;
 using VinylPi.Models.ApiResponses;
 using VinylPi.Services;
 
@@ -13,6 +15,10 @@ builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton<IApiService, ApiService>();
 
+//https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-7.0&tabs=visual-studio
+builder.Services.AddDbContext<MyContext>(options =>
+  options.UseSqlServer(builder.Configuration.GetConnectionString("DbContext")));
+
 
 var app = builder.Build();
 
@@ -23,6 +29,17 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<MyContext>();
+    //DbInitializer.Initialize(context);
+    context.Database.EnsureCreated();
+}
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

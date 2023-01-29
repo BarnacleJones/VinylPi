@@ -14,7 +14,7 @@ namespace VinylPi.Models.ApiResponses.CollectionModels
         public List<Format>? Formats { get; set; }
         public List<Label>? Labels { get; set; }
         public List<Artist>? Artists { get; set; }
-        public List<string>? Genres { get; set; }
-        public List<string>? Styles { get; set; }
+        public List<Genres>? Genres { get; set; }
+        public List<Styles>? Styles { get; set; }
     }
 }
