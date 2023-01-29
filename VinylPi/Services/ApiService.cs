@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using VinylPi.Models;
 
 namespace VinylPi.Services
 {
@@ -29,8 +30,8 @@ namespace VinylPi.Services
                 // Get the JSON data and deserialize
                 var json = await response.Content.ReadAsStringAsync();
                 //var data = JsonConvert.DeserializeObject<CollectionItemsByFolderReponseDto>(json);
-                var data = JsonConvert.DeserializeObject(json);
-
+                var data = JsonConvert.DeserializeObject<CollectionResponseDto>(json);
+                
 
                 return Ok(data);
             }
