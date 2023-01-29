@@ -1,8 +1,7 @@
 ﻿namespace VinylPi.Models.ApiResponses.CollectionModels
 {
-    public class Styles
+    public class StylesDto
     {
-        public int? Id { get; set; }
         public string? Style { get; set; }
     }
 }

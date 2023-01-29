@@ -1,4 +1,4 @@
-﻿namespace VinylPi.Models.ApiResponses.CollectionModels
+﻿namespace VinylPi.DataAccess.Models.CollectionModels
 {
     public class Format
     {

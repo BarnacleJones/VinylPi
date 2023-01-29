@@ -1,6 +1,6 @@
-﻿namespace VinylPi.Models.ApiResponses.CollectionModels
+﻿namespace VinylPi.Models.ApiResponses.CollectionDtoModels
 {
-    public class Artist
+    public class ArtistDto
     {
         public string? Name { get; set; }
         public string? Anv { get; set; }

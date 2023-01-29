@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VinylPi.Models.ApiResponses.CollectionModels;
+using VinylPi.DataAccess.Models.CollectionModels;
 
 namespace VinylPi.DataAccess
 {
