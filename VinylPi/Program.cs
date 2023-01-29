@@ -31,14 +31,14 @@ if (!app.Environment.IsDevelopment())
 }
 
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var services = scope.ServiceProvider;
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
 
-//    var context = services.GetRequiredService<MyContext>();
-//    //DbInitializer.Initialize(context);
-//    context.Database.EnsureCreated();
-//}
+    var context = services.GetRequiredService<MyContext>();
+    //DbInitializer.Initialize(context);
+    context.Database.EnsureCreated();
+}
 
 
 app.UseHttpsRedirection();

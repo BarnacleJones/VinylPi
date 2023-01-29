@@ -22,7 +22,7 @@ namespace VinylPi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Artist", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Artist", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Artist", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,7 +92,7 @@ namespace VinylPi.Migrations
                     b.ToTable("BasicInformation", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Descriptions", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Descriptions", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,7 +113,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Descriptions");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Format", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Format", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -140,7 +140,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Formats", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Genres", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Genres", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -161,7 +161,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Label", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Label", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -197,7 +197,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Labels", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Pagination", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Pagination", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -224,7 +224,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Pagination", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Release", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Release", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -256,7 +256,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Releases", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Root", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Root", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -274,7 +274,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Root", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Styles", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Styles", b =>
                 {
                     b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
@@ -295,7 +295,7 @@ namespace VinylPi.Migrations
                     b.ToTable("Styles");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Urls", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Urls", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -314,80 +314,80 @@ namespace VinylPi.Migrations
                     b.ToTable("Urls", (string)null);
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Artist", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Artist", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", null)
                         .WithMany("Artists")
                         .HasForeignKey("BasicInformationId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Descriptions", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Descriptions", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.Format", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.Format", null)
                         .WithMany("Descriptions")
                         .HasForeignKey("FormatId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Format", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Format", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", null)
                         .WithMany("Formats")
                         .HasForeignKey("BasicInformationId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Genres", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Genres", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", null)
                         .WithMany("Genres")
                         .HasForeignKey("BasicInformationId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Label", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Label", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", null)
                         .WithMany("Labels")
                         .HasForeignKey("BasicInformationId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Pagination", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Pagination", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.Urls", "Urls")
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.Urls", "Urls")
                         .WithMany()
                         .HasForeignKey("UrlsId");
 
                     b.Navigation("Urls");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Release", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Release", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.Root", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.Root", null)
                         .WithMany("Releases")
                         .HasForeignKey("RootId");
 
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", "basic_information")
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", "basic_information")
                         .WithMany()
                         .HasForeignKey("basic_informationId");
 
                     b.Navigation("basic_information");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Root", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Root", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.Pagination", "Pagination")
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.Pagination", "Pagination")
                         .WithMany()
                         .HasForeignKey("PaginationId");
 
                     b.Navigation("Pagination");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Styles", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Styles", b =>
                 {
-                    b.HasOne("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", null)
+                    b.HasOne("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", null)
                         .WithMany("Styles")
                         .HasForeignKey("BasicInformationId");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.BasicInformation", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.BasicInformation", b =>
                 {
                     b.Navigation("Artists");
 
@@ -400,12 +400,12 @@ namespace VinylPi.Migrations
                     b.Navigation("Styles");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Format", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Format", b =>
                 {
                     b.Navigation("Descriptions");
                 });
 
-            modelBuilder.Entity("VinylPi.Models.ApiResponses.CollectionModels.Root", b =>
+            modelBuilder.Entity("VinylPi.DataAccess.Models.CollectionModels.Root", b =>
                 {
                     b.Navigation("Releases");
                 });
