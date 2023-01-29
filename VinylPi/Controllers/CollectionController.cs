@@ -14,8 +14,19 @@ namespace VinylPi.Controllers
 
         public IActionResult Index()
         {
-            var request = _apiService.GetApiDataFromDiscogs($"https://api.discogs.com/users/gratefulbed/collection/releases/0");
+            //var request = _apiService.GetApiDataFromDiscogs($"https://api.discogs.com/users/gratefulbed/collection/releases/0");
+
+            //request with pagination parameters
+            var request = _apiService.GetApiDataFromDiscogs($"https://api.discogs.com/users/gratefulbed/collection/releases/0?page=2&per_page=100");
+
+
             var data = request.Result;  
+
+            //TODO figure out how to deal with pagination
+            //collect all the data from all pages in a new (or same) service to seed a database with EF with data
+            //make database maintenance page to update database with new response
+            //use database to make collection page
+            //click on each parent item to go to its relevant child pages, views for all
 
             return View(data);
         }
