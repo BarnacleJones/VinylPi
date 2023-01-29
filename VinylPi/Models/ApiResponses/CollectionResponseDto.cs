@@ -1,6 +1,6 @@
 ﻿using VinylPi.Models.ApiResponses.CollectionModels;
 
-namespace VinylPi.Models
+namespace VinylPi.Models.ApiResponses
 {
     public partial class CollectionResponseDto
     {

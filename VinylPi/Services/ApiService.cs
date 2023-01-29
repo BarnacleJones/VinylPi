@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using VinylPi.Models;
+using VinylPi.Models.ApiResponses;
 
 namespace VinylPi.Services
 {
