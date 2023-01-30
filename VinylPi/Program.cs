@@ -1,9 +1,5 @@
-using AutoMapper;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration.EnvironmentVariables;
 using VinylPi.DataAccess;
-using VinylPi.Models.ApiResponses;
 using VinylPi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +12,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IApiService, ApiService>();
 
 //https://learn.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-7.0&tabs=visual-studio
-builder.Services.AddDbContext<MyContext>(options =>
+builder.Services.AddDbContext<VinylDbContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("DbContext")));
 
 
@@ -35,7 +31,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<MyContext>();
+    var context = services.GetRequiredService<VinylPi.DataAccess.VinylDbContext>();
     //DbInitializer.Initialize(context);
     context.Database.EnsureCreated();
 }

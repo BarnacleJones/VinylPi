@@ -1,0 +1,14 @@
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.AssemblyInfo.cs
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\bin\Debug\net6.0\VinylPi.DataAccess.deps.json
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\bin\Debug\net6.0\VinylPi.DataAccess.runtimeconfig.json
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\bin\Debug\net6.0\VinylPi.DataAccess.dll
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\bin\Debug\net6.0\VinylPi.DataAccess.pdb
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.dll
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\refint\VinylPi.DataAccess.dll
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.pdb
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\VinylPi.DataAccess.genruntimeconfig.cache
+C:\Users\Ben\source\repos\VinylPi\VinylPi.DataAcces\obj\Debug\net6.0\ref\VinylPi.DataAccess.dll

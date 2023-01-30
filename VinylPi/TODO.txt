@@ -1,0 +1,10 @@
+Create a EntityDtoMapper for Json Response
+Create a 
+
+collect all the data from all pages in a new (or same) service to seed a database with EF with data
+
+
+
+make database maintenance page to update database with new response
+use database to make collection page
+click on each parent item to go to its relevant child pages, views for all

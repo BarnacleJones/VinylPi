@@ -1184,6 +1184,20 @@
             "rid": "win"
           }
         }
+      },
+      "VinylPi.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
+        },
+        "compile": {
+          "bin/placeholder/VinylPi.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VinylPi.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -3575,6 +3589,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "VinylPi.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../VinylPi.DataAcces/VinylPi.DataAccess.csproj",
+      "msbuildProject": "../VinylPi.DataAcces/VinylPi.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3583,7 +3602,8 @@
       "Microsoft.EntityFrameworkCore >= 7.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2",
-      "Newtonsoft.Json >= 13.0.2"
+      "Newtonsoft.Json >= 13.0.2",
+      "VinylPi.DataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3612,7 +3632,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi.DataAcces\\VinylPi.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Ben\\source\\repos\\VinylPi\\VinylPi.DataAcces\\VinylPi.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
