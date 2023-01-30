@@ -1,10 +1,32 @@
-Create a EntityDtoMapper for Json Response
-Create a 
+NOW
+_________________________________________________________________________
 
-collect all the data from all pages in a new (or same) service to seed a database with EF with data
+Use ICollectionDtoToDbService as a service to map the Json to Objects for Db Models
+
+Questions
+How to map the dto to entities?
+How to get dbContext to write + update to database?
+Best method for updating newly pulled collection data to database? ^^Above service all I need?
+
+Viewing it as
+	Click on DB maintenance page
+		Button to update database
+			Goes to ICollectionDtoToDbService.UpdateDatabase);	
+				Uses Api Service to make the call for the json
+				Uses ______ Service to do the json>entity mapping??
+				Uses DbContext to write the objects.
 
 
 
+
+
+
+
+
+FUTURE
+__________________________________________________________________________
 make database maintenance page to update database with new response
-use database to make collection page
-click on each parent item to go to its relevant child pages, views for all
+
+make collection view
+make artist view
+etc views
